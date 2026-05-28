@@ -1,0 +1,31 @@
+{
+  "name": "HabitLog",
+  "type": "object",
+  "properties": {
+    "habit_id": {
+      "type": "string",
+      "description": "Reference to the habit"
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of completion"
+    },
+    "completed": {
+      "type": "boolean",
+      "default": true
+    },
+    "xp_earned": {
+      "type": "number",
+      "default": 0
+    },
+    "note": {
+      "type": "string",
+      "description": "Optional note"
+    }
+  },
+  "required": [
+    "habit_id",
+    "date"
+  ]
+}

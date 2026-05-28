@@ -1,0 +1,78 @@
+{
+  "name": "Habit",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Name of the habit"
+    },
+    "description": {
+      "type": "string",
+      "description": "Brief description"
+    },
+    "icon": {
+      "type": "string",
+      "description": "Emoji icon for the habit"
+    },
+    "frequency": {
+      "type": "string",
+      "enum": [
+        "daily",
+        "weekly"
+      ],
+      "default": "daily"
+    },
+    "target_days": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Days of week for weekly habits"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "health",
+        "fitness",
+        "mindfulness",
+        "learning",
+        "productivity",
+        "social",
+        "creativity",
+        "other"
+      ],
+      "default": "other"
+    },
+    "color": {
+      "type": "string",
+      "description": "Color theme for the habit"
+    },
+    "current_streak": {
+      "type": "number",
+      "default": 0
+    },
+    "best_streak": {
+      "type": "number",
+      "default": 0
+    },
+    "total_completions": {
+      "type": "number",
+      "default": 0
+    },
+    "xp_per_completion": {
+      "type": "number",
+      "default": 10
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true
+    },
+    "order": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "required": [
+    "title"
+  ]
+}

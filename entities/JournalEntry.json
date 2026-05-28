@@ -1,0 +1,52 @@
+{
+  "name": "JournalEntry",
+  "type": "object",
+  "properties": {
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "mood": {
+      "type": "string",
+      "enum": [
+        "amazing",
+        "good",
+        "okay",
+        "low",
+        "rough"
+      ],
+      "default": "okay"
+    },
+    "mood_score": {
+      "type": "number",
+      "description": "1-5 scale"
+    },
+    "gratitude": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Things grateful for"
+    },
+    "reflection": {
+      "type": "string",
+      "description": "Daily reflection text"
+    },
+    "wins": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "challenges": {
+      "type": "string"
+    },
+    "energy_level": {
+      "type": "number",
+      "description": "1-5 scale"
+    }
+  },
+  "required": [
+    "date"
+  ]
+}

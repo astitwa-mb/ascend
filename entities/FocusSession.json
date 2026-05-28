@@ -1,0 +1,38 @@
+{
+  "name": "FocusSession",
+  "type": "object",
+  "properties": {
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "duration_minutes": {
+      "type": "number"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "pomodoro",
+        "deep_work",
+        "flow"
+      ],
+      "default": "pomodoro"
+    },
+    "label": {
+      "type": "string",
+      "description": "What the user worked on"
+    },
+    "completed": {
+      "type": "boolean",
+      "default": true
+    },
+    "xp_earned": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "required": [
+    "date",
+    "duration_minutes"
+  ]
+}

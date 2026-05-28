@@ -1,0 +1,76 @@
+{
+  "name": "UserProfile",
+  "type": "object",
+  "properties": {
+    "identity": {
+      "type": "string",
+      "description": "Who the user wants to become"
+    },
+    "goals_selected": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "motivation_type": {
+      "type": "string",
+      "enum": [
+        "achiever",
+        "explorer",
+        "socializer",
+        "competitor"
+      ],
+      "default": "achiever"
+    },
+    "xp": {
+      "type": "number",
+      "default": 0
+    },
+    "level": {
+      "type": "number",
+      "default": 1
+    },
+    "discipline_score": {
+      "type": "number",
+      "default": 50
+    },
+    "total_habits_completed": {
+      "type": "number",
+      "default": 0
+    },
+    "total_focus_minutes": {
+      "type": "number",
+      "default": 0
+    },
+    "total_journal_entries": {
+      "type": "number",
+      "default": 0
+    },
+    "longest_streak": {
+      "type": "number",
+      "default": 0
+    },
+    "badges": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "rank": {
+      "type": "string",
+      "default": "Beginner"
+    },
+    "onboarding_completed": {
+      "type": "boolean",
+      "default": false
+    },
+    "premium": {
+      "type": "boolean",
+      "default": false
+    },
+    "avatar_url": {
+      "type": "string"
+    }
+  },
+  "required": []
+}
